@@ -191,3 +191,16 @@ h3 { margin-bottom: 12px; font-size: 1.45rem; }
   .project-card.featured .project-image { min-height: 260px; border-right: 0; border-bottom: 1px solid var(--line); }
   .section { padding: 62px 0; }
 }
+.video-showcase {
+    margin-top: 34px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #000;
+}
+
+.video-showcase video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
