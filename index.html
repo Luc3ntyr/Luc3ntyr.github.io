@@ -1,23 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Napán | Software Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de David Napán: desarrollo de software, herramientas interactivas, game systems y prototipos técnicos.">
+  <title>David Napán | Software Developer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">David Napán</a>
+      <nav class="main-nav">
+        <a href="#projects">Proyectos</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <h1>David Napán</h1>
-    <p>Software Developer · Interactive Tools · Game Systems</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Software Developer · Interactive Tools · Game Systems</p>
+          <h1>Construyo software, herramientas y sistemas interactivos.</h1>
+          <p class="hero-copy">
+            Desarrollador de software con experiencia profesional en .NET y sistemas empresariales,
+            además de proyectos personales enfocados en herramientas para juegos de rol,
+            prototipos de videojuegos y experiencias interactivas.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">Ver proyectos</a>
+            <a class="button secondary" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
 
-    <h2>Proyectos</h2>
+        <aside class="hero-card">
+          <span class="status-dot"></span>
+          <strong>Actualmente trabajando en MonoWin</strong>
+          <p>VTT y toolkit para dirección de juegos de rol construido con C#, WinForms y MonoGame.</p>
+        </aside>
+      </div>
+    </section>
 
-    <h3>MonoWin</h3>
-    <p>
-        Herramienta para dirección de juegos de rol desarrollada
-        con C#, WinForms y MonoGame.
-    </p>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured work</p>
+          <h2>Proyectos</h2>
+          <p>Una selección de herramientas, juegos y prototipos técnicos.</p>
+        </div>
 
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-image placeholder"><span>Captura de MonoWin</span></div>
+            <div class="project-content">
+              <p class="project-type">Interactive Tool · VTT</p>
+              <h3>MonoWin</h3>
+              <p>
+                Herramienta para dirigir juegos de rol con mapas, fichas, fog of war,
+                iluminación, audio, efectos climáticos, animaciones y sistemas configurables.
+              </p>
+              <ul class="tag-list">
+                <li>C#</li><li>WinForms</li><li>MonoGame</li><li>SQLite</li><li>Dapper</li>
+              </ul>
+              <a class="text-link" href="projects/monowin.html">Ver proyecto →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image placeholder"><span>Ceviche Game Jam</span></div>
+            <div class="project-content">
+              <p class="project-type">Game Jam · Platformer</p>
+              <h3>Ceviche Game Jam</h3>
+              <p>
+                Plataformas con elementos de ritmo inspirado en el folclore peruano.
+                Arte, música, diseño y programación realizados de forma independiente.
+              </p>
+              <span class="coming-soon">Próximamente</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image placeholder"><span>2.5D Prototype</span></div>
+            <div class="project-content">
+              <p class="project-type">Technical Prototype</p>
+              <h3>2.5D Experiment</h3>
+              <p>
+                Experimento de representación 2.5D con sprites en capas,
+                cámara y estética pixel-art construida sobre geometría volumétrica.
+              </p>
+              <span class="coming-soon">En desarrollo</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image placeholder"><span>Dreamlands 0</span></div>
+            <div class="project-content">
+              <p class="project-type">Gameplay Prototype</p>
+              <h3>Dreamlands 0</h3>
+              <p>
+                Demo top-down centrada en movimiento, puzzles, enemigos,
+                bloqueo, esquiva y uso de profundidad mediante eje Z.
+              </p>
+              <span class="coming-soon">Próximamente</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alternate" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Sobre mí</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Profesionalmente trabajo con C#, .NET, ASP.NET Core y SQL Server,
+            principalmente sobre sistemas empresariales y aplicaciones en producción.
+          </p>
+          <p>
+            Fuera del trabajo desarrollo herramientas interactivas, prototipos
+            de videojuegos y sistemas para tabletop RPGs. Me interesa especialmente
+            construir herramientas que permitan crear, organizar o ejecutar experiencias.
+          </p>
+          <p>
+            Actualmente estoy explorando una transición progresiva hacia roles de
+            herramientas, game systems, technical design y desarrollo interactivo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Hablemos</h2>
+          <p>Disponible para oportunidades de software, herramientas interactivas y proyectos relacionados con game systems.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:dav.nm.08@gmail.com">dav.nm.08@gmail.com</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Luc3ntyr" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 David Napán.</p></div>
+  </footer>
 </body>
 </html>
