@@ -1,0 +1,127 @@
+.devil-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.devil-hero .lead {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.13rem;
+}
+
+.devil-logo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.devil-logo {
+  width: min(100%, 520px);
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.devil-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.devil-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.devil-shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #090b0f;
+}
+
+.devil-shot.wide {
+  grid-column: 1 / -1;
+}
+
+.devil-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 540px;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.responsibility-grid > div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.responsibility-grid strong,
+.responsibility-grid span {
+  display: block;
+}
+
+.responsibility-grid span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.limitation-card {
+  padding: 28px;
+  border: 1px solid #704b32;
+  border-radius: 16px;
+  background: rgba(112, 75, 50, .12);
+}
+
+.itch-card {
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.itch-card > div {
+  max-width: 720px;
+}
+
+@media (max-width: 780px) {
+  .devil-hero,
+  .responsibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .devil-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .devil-shot.wide {
+    grid-column: auto;
+  }
+
+  .itch-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
