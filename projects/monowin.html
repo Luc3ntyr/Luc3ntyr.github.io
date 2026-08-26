@@ -7,11 +7,13 @@
   <title>MonoWin | David Napán</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="../index.html">David Napán</a>
-      <nav class="main-nav">
+
+      <nav class="main-nav" aria-label="Navegación principal">
         <a href="../index.html#projects">Proyectos</a>
         <a href="../index.html#about">Sobre mí</a>
         <a href="../index.html#contact">Contacto</a>
@@ -21,37 +23,131 @@
 
   <main class="project-page">
     <div class="container">
+
       <a class="back-link" href="../index.html">← Volver al portfolio</a>
 
       <section class="project-hero">
         <p class="eyebrow">Interactive Tool · Virtual Tabletop</p>
+
         <h1>MonoWin</h1>
+
         <p class="lead">
           Herramienta personal para preparar y dirigir juegos de rol mediante mapas,
           fichas, multimedia, efectos visuales y sistemas configurables.
         </p>
-        <div class="project-meta">
-          <span>C#</span><span>WinForms</span><span>MonoGame</span>
-          <span>SQLite</span><span>Dapper</span><span>NAudio</span>
+
+        <div class="project-meta" aria-label="Tecnologías usadas">
+          <span>C#</span>
+          <span>WinForms</span>
+          <span>MonoGame</span>
+          <span>SQLite</span>
+          <span>Dapper</span>
+          <span>NAudio</span>
         </div>
       </section>
 
-     <div class="video-showcase">
-      <video autoplay muted loop playsinline controls>
-              <source src="../assets/video/MonoWinDemo.mp4" type="video/mp4">
-              Tu navegador no soporta reproducción de video.
-          </video>
+      <!-- Demo principal -->
+      <div class="video-showcase">
+        <video autoplay muted loop playsinline controls>
+          <source src="../assets/video/MonoWinDemo.mp4" type="video/mp4">
+          Tu navegador no soporta reproducción de video.
+        </video>
       </div>
 
+      <!-- Galería -->
+      <section class="project-section">
+        <p class="eyebrow">Galería</p>
+
+        <h2>Distintas partes del sistema</h2>
+
+        <p>
+          MonoWin reúne herramientas de preparación, representación visual y apoyo
+          mecánico durante la partida. Estas capturas muestran algunas de sus áreas
+          principales.
+        </p>
+
+        <div class="project-gallery">
+
+          <figure class="gallery-card">
+            <img
+              src="../assets/image/scene-designer.webp"
+              alt="Editor de escena de MonoWin con mapa top-down, grilla y herramientas de diseño"
+              loading="lazy">
+
+            <figcaption>
+              <strong>Diseñador de escena</strong><br>
+              Construcción de mapas, configuración de grilla y organización de actores,
+              objetos y elementos de la escena.
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="../assets/image/editor-25d.webp"
+              alt="Editor 2.5D de MonoWin mostrando una escena de cueva y controles de profundidad"
+              loading="lazy">
+
+            <figcaption>
+              <strong>Editor 2.5D</strong><br>
+              Configuración de horizonte, profundidad, perspectiva y posicionamiento
+              de elementos para escenas con sensación de profundidad.
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="../assets/image/gameplay-fow.webp"
+              alt="Mesa de juego de MonoWin con fichas, fog of war e iluminación"
+              loading="lazy">
+
+            <figcaption>
+              <strong>Mesa de juego</strong><br>
+              Fog of war, iluminación y control visual del tablero durante la sesión.
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="../assets/image/character-stats.webp"
+              alt="Panel de estado de personaje de MonoWin con heridas, características y habilidades"
+              loading="lazy">
+
+            <figcaption>
+              <strong>Ficha y estadísticas</strong><br>
+              Gestión de heridas, características, habilidades y hechizos dentro del
+              sistema de juego seleccionado.
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="../assets/image/combat-dice.webp"
+              alt="Panel de combate y dados de MonoWin"
+              loading="lazy">
+
+            <figcaption>
+              <strong>Combate y dados</strong><br>
+              Resolución de tiradas y herramientas de apoyo para mecánicas de combate
+              y sistemas basados en dados.
+            </figcaption>
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- Contexto -->
       <section class="project-section">
         <p class="eyebrow">Contexto</p>
+
         <h2>De una herramienta WinForms a un VTT más completo</h2>
+
         <p>
           El proyecto nació a partir de herramientas que desarrollé para preparar y ejecutar
           partidas de Arkham Horror. La primera versión utilizaba exclusivamente WinForms:
           permitía definir mapas, fichas, zonas ocultas, hojas de personaje y dados,
           almacenando la configuración en JSON para cargarla después durante la partida.
         </p>
+
         <p>
           Conforme aumentó la cantidad de elementos visuales, el enfoque original comenzó
           a presentar limitaciones de rendimiento. MonoWin surgió como una evolución del
@@ -60,9 +156,12 @@
         </p>
       </section>
 
+      <!-- Características -->
       <section class="project-section">
         <p class="eyebrow">Características</p>
+
         <h2>Qué permite hacer</h2>
+
         <ul>
           <li>Gestión de mapas, escenas y fichas.</li>
           <li>Fog of war e iluminación interactiva.</li>
@@ -76,15 +175,19 @@
         </ul>
       </section>
 
+      <!-- Problemas técnicos -->
       <section class="project-section">
         <p class="eyebrow">Problemas técnicos</p>
+
         <h2>Aspectos que más me interesó resolver</h2>
+
         <p>
           Uno de los principales retos fue mantener una experiencia visual fluida a medida
           que aumentaba la complejidad del mapa. El cambio desde un renderizado basado
           exclusivamente en WinForms hacia MonoGame permitió separar mejor la interfaz
           tradicional de la capa gráfica interactiva.
         </p>
+
         <p>
           El proyecto también ha requerido combinar subsistemas con necesidades distintas:
           persistencia de datos, renderizado, audio, efectos visuales, reglas de juego,
@@ -92,29 +195,38 @@
         </p>
       </section>
 
+      <!-- Rol -->
       <section class="project-section">
         <p class="eyebrow">Rol</p>
+
         <h2>Trabajo realizado</h2>
+
         <p>
           Proyecto personal independiente. Diseño de la herramienta, programación,
           interfaz, sistemas, integración multimedia, pruebas y evolución del producto.
         </p>
       </section>
 
+      <!-- Estado -->
       <section class="project-section">
         <p class="eyebrow">Estado</p>
+
         <h2>Proyecto en evolución</h2>
+
         <p>
           MonoWin continúa en desarrollo. Actualmente el objetivo es seguir mejorando
           el rendimiento, la configuración de sistemas de juego y las herramientas
           audiovisuales utilizadas durante las sesiones.
         </p>
       </section>
+
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><p>© 2026 David Napán.</p></div>
+    <div class="container">
+      <p>© 2026 David Napán.</p>
+    </div>
   </footer>
 </body>
 </html>
