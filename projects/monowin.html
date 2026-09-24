@@ -1,375 +1,188 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="MonoWin, proyecto personal de David Napán: Virtual Tabletop de escritorio para preparación y dirección de juegos de rol.">
-  <title>MonoWin | David Napán</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html">David Napán</a>
-
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="../index.html#projects">Proyectos</a>
-        <a href="../index.html#about">Sobre mí</a>
-        <a href="../index.html#contact">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="project-page">
-    <div class="container">
-
-      <a class="back-link" href="../index.html">← Volver al portfolio</a>
-
-      <!-- Hero -->
-      <section class="project-hero">
-        <p class="eyebrow">Virtual Tabletop · Desktop Application</p>
-
-        <h1>MonoWin VTT</h1>
-
-        <p class="lead">
-          Virtual Tabletop de escritorio desarrollado para preparar, configurar y
-          dirigir partidas de rol, combinando herramientas de edición, sistemas de
-          juego configurables y una mesa interactiva para sesiones presenciales y online.
-        </p>
-
-        <div class="project-meta" aria-label="Tecnologías usadas">
-          <span>C#</span>
-          <span>WinForms</span>
-          <span>MonoGame</span>
-          <span>SQLite</span>
-          <span>Dapper</span>
-          <span>NAudio</span>
-        </div>
-      </section>
-
-      <!-- Demo principal -->
-      <div class="video-showcase">
-        <video autoplay muted loop playsinline controls>
-          <source src="../assets/video/MonoWinDemo.mp4" type="video/mp4">
-          Tu navegador no soporta reproducción de video.
-        </video>
-      </div>
-
-      <!-- Contexto -->
-      <section class="project-section">
-        <p class="eyebrow">Contexto</p>
-
-        <h2>De una herramienta personal a un VTT completo</h2>
-
-        <p>
-          MonoWin nació a partir de herramientas que desarrollé para preparar y dirigir
-          mis propias partidas de rol. La primera versión utilizaba exclusivamente
-          WinForms y permitía trabajar con mapas, fichas, zonas ocultas, hojas de
-          personaje y dados, almacenando la configuración de las partidas para
-          recuperarla posteriormente.
-        </p>
-
-        <p>
-          Conforme aumentaron la cantidad de elementos en pantalla y las necesidades
-          audiovisuales durante las sesiones, ese enfoque comenzó a mostrar limitaciones.
-          El proyecto evolucionó entonces hacia una arquitectura que mantiene WinForms
-          para las herramientas de configuración y utiliza MonoGame para la representación
-          interactiva de la mesa de juego.
-        </p>
-
-        <p>
-          Desde entonces, MonoWin ha evolucionado hasta reunir en una misma aplicación
-          la preparación de sistemas de rol, campañas, aventuras, personajes y escenas
-          con las herramientas necesarias para utilizarlos durante una partida.
-        </p>
-      </section>
-
-      <!-- Preparación -->
-      <section class="project-section">
-        <p class="eyebrow">Preparación</p>
-
-        <h2>Construir la partida antes de jugarla</h2>
-
-        <p>
-          La preparación se realiza desde un conjunto de herramientas que permiten
-          organizar los elementos reutilizables del VTT y construir con ellos el
-          contenido de cada campaña.
-        </p>
-
-        <ul>
-          <li>Creación y configuración de sistemas de juego.</li>
-          <li>Definición de atributos, dados, reglas de tiradas y cálculo de daño.</li>
-          <li>Gestión de personajes, criaturas, habilidades, talentos y hechizos.</li>
-          <li>Biblioteca reutilizable de mapas, imágenes, sonidos y efectos visuales.</li>
-          <li>Organización de campañas, aventuras y escenas.</li>
-          <li>Gestión de objetos, armas, vehículos, estados y otros contenidos.</li>
-        </ul>
-      </section>
-
-      <!-- Editor de escenas -->
-      <section class="project-section">
-        <p class="eyebrow">Diseño de escenas</p>
-
-        <h2>Preparar el escenario de juego</h2>
-
-        <p>
-          El diseñador permite construir cada escenario antes de la sesión, colocando
-          los elementos que posteriormente serán utilizados por el director y los
-          jugadores en la mesa de juego.
-        </p>
-
-        <div class="project-gallery">
-
-          <figure class="gallery-card">
-            <img
-              src="../assets/image/scene-designer.webp"
-              alt="Editor de escena de MonoWin con mapa top-down, grilla y herramientas de diseño"
-              loading="lazy">
-
-            <figcaption>
-              <strong>Diseñador de escena</strong><br>
-              Configuración de mapas, grilla, actores, objetos, vehículos, iluminación
-              y elementos interactivos del escenario.
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card">
-            <img
-              src="../assets/image/editor-25d.webp"
-              alt="Editor 2.5D de MonoWin mostrando una escena y controles de profundidad"
-              loading="lazy">
-
-            <figcaption>
-              <strong>Editor 2.5D</strong><br>
-              Configuración de horizonte, profundidad, perspectiva y posicionamiento
-              de elementos para escenas con sensación de profundidad.
-            </figcaption>
-          </figure>
-
-        </div>
-
-        <p>
-          Las escenas también pueden incorporar submapas, puntos de viaje entre
-          escenarios, efectos ambientales, zonas animadas y otros elementos preparados
-          específicamente para ser activados durante la sesión.
-        </p>
-      </section>
-
-      <!-- Mesa de juego -->
-      <section class="project-section">
-        <p class="eyebrow">Mesa de juego</p>
-
-        <h2>Dirección durante la sesión</h2>
-
-        <p>
-          Una vez iniciada la partida, MonoWin utiliza la configuración preparada
-          previamente para convertir el escenario en una mesa interactiva desde la
-          que se controla el desarrollo de la sesión.
-        </p>
-
-        <div class="project-gallery">
-
-          <figure class="gallery-card">
-            <img
-              src="../assets/image/gameplay-fow.webp"
-              alt="Mesa de juego de MonoWin con fichas, fog of war, iluminación y efectos visuales"
-              loading="lazy">
-
-            <figcaption>
-              <strong>Vista de juego</strong><br>
-              Movimiento de fichas, niebla de guerra, iluminación, efectos ambientales,
-              animaciones y control visual del escenario.
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card">
-            <img
-              src="../assets/image/character-stats.webp"
-              alt="Panel de personaje de MonoWin con heridas, características y habilidades"
-              loading="lazy">
-
-            <figcaption>
-              <strong>Personajes durante la partida</strong><br>
-              Consulta de características, heridas, habilidades, hechizos, estados
-              e información asociada a cada personaje.
-            </figcaption>
-          </figure>
-
-        </div>
-
-        <p>
-          Desde esta interfaz es posible cambiar de escena, recorrer mapas y submapas,
-          revelar u ocultar zonas, mostrar imágenes y documentos a los jugadores y
-          conservar el estado de la partida para continuarla posteriormente.
-        </p>
-      </section>
-
-      <!-- Sistemas y combate -->
-      <section class="project-section">
-        <p class="eyebrow">Sistemas y combate</p>
-
-        <h2>Reglas configurables en lugar de un único sistema</h2>
-
-        <p>
-          MonoWin no está diseñado alrededor de las reglas de un único juego. Cada
-          sistema puede definir sus propias características, dados y reglas de
-          resolución, permitiendo que las herramientas disponibles durante la partida
-          se adapten al juego seleccionado.
-        </p>
-
-        <div class="project-gallery">
-
-          <figure class="gallery-card">
-            <img
-              src="../assets/image/combat-dice.webp"
-              alt="Panel de combate y dados de MonoWin"
-              loading="lazy">
-
-            <figcaption>
-              <strong>Dados y combate</strong><br>
-              Resolución de tiradas, pruebas de personaje y PNJ, cálculo de daño,
-              aplicación de heridas y gestión de estados.
-            </figcaption>
-          </figure>
-
-        </div>
-
-        <p>
-          Esta separación permite reutilizar el VTT con distintos juegos de rol sin
-          trasladar sus reglas directamente al núcleo de la mesa de juego.
-        </p>
-      </section>
-
-      <!-- Ambientación -->
-      <section class="project-section">
-        <p class="eyebrow">Ambientación</p>
-
-        <h2>La escena como parte de la narración</h2>
-
-        <p>
-          Además de representar posiciones y movimiento, la mesa incorpora herramientas
-          audiovisuales destinadas a acompañar la narración: iluminación dinámica,
-          cambios de momento del día, sonidos ambientales, música, filtros, partículas,
-          animaciones ambientales y efectos visuales asociados a habilidades o hechizos.
-        </p>
-
-        <p>
-          La salida de juego también puede distribuirse entre varias pantallas,
-          separando los controles utilizados por el director de la información
-          presentada a los jugadores.
-        </p>
-      </section>
-
-      <!-- Arquitectura -->
-      <section class="project-section">
-        <p class="eyebrow">Arquitectura</p>
-
-        <h2>Separar configuración, ejecución y representación</h2>
-
-        <p>
-          MonoWin combina una interfaz de administración basada en WinForms con una
-          capa de representación interactiva desarrollada con MonoGame. La aplicación
-          mantiene separados los componentes responsables de configuración, persistencia,
-          reglas de juego, multimedia y representación gráfica.
-        </p>
-
-        <!--
-          Insertar aquí la imagen del diagrama de arquitectura.
-          Ejemplo:
-
-          <figure class="gallery-card">
-            <img
-              src="../assets/image/monowin-architecture.webp"
-              alt="Diagrama de arquitectura de MonoWin"
-              loading="lazy">
-
-            <figcaption>
-              <strong>Arquitectura general</strong><br>
-              Relación entre las herramientas de configuración, persistencia,
-              servicios y la mesa interactiva.
-            </figcaption>
-          </figure>
-        -->
-
-        <p>
-          Esta estructura permite que las herramientas tradicionales de escritorio
-          se encarguen de tareas de edición y administración, mientras MonoGame se
-          ocupa del renderizado y de los elementos que requieren actualización
-          continua durante la partida.
-        </p>
-      </section>
-
-      <!-- Decisiones técnicas -->
-      <section class="project-section">
-        <p class="eyebrow">Decisiones técnicas</p>
-
-        <h2>De WinForms a un motor de representación dedicado</h2>
-
-        <p>
-          Uno de los principales retos apareció cuando las primeras versiones comenzaron
-          a manejar mapas más grandes, múltiples fichas, iluminación y otros elementos
-          visuales simultáneamente. El renderizado basado exclusivamente en controles
-          WinForms dejó de ser una solución adecuada para ese escenario.
-        </p>
-
-        <p>
-          En lugar de reemplazar toda la aplicación, mantuve WinForms allí donde seguía
-          siendo útil —configuración, formularios y herramientas de edición— y trasladé
-          la representación interactiva a MonoGame.
-        </p>
-
-        <p>
-          Esta evolución también obligó a coordinar subsistemas con responsabilidades
-          diferentes: persistencia, renderizado, audio, reglas de juego, efectos
-          visuales, gestión de recursos y comunicación externa.
-        </p>
-      </section>
-
-      <!-- Rol -->
-      <section class="project-section">
-        <p class="eyebrow">Rol</p>
-
-        <h2>Trabajo realizado</h2>
-
-        <p>
-          Proyecto personal desarrollado de forma independiente. Me he encargado del
-          diseño funcional y técnico, arquitectura, programación, persistencia,
-          interfaz de escritorio, motor de juego, herramientas de edición,
-          integración multimedia, pruebas y evolución del proyecto.
-        </p>
-      </section>
-
-      <!-- Estado -->
-      <section class="project-section">
-        <p class="eyebrow">Estado actual</p>
-
-        <h2>Versión estable previa a Discord Activity</h2>
-
-        <p>
-          MonoWin se encuentra actualmente en su versión más estable hasta la fecha,
-          con el flujo principal de preparación y dirección de partidas operativo.
-          Esta versión sirve como base antes de la siguiente etapa de evolución del
-          proyecto.
-        </p>
-
-        <p>
-          El siguiente paso es ampliar la integración con Discord mediante una Activity,
-          trasladando progresivamente determinadas interacciones de los jugadores
-          —como dados, información de personaje y participación en la partida— a una
-          interfaz conectada con la sesión de MonoWin.
-        </p>
-      </section>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 David Napán.</p>
-    </div>
-  </footer>
-</body>
-</html>
+```html
+<!-- Editor de escenas -->
+<section class="project-section">
+  <p class="eyebrow">Diseño de escenas</p>
+
+  <h2>Preparar el escenario de juego</h2>
+
+  <p>
+    El diseñador permite construir cada escenario antes de la sesión, colocando
+    los elementos que posteriormente serán utilizados por el director y los
+    jugadores en la mesa de juego.
+  </p>
+
+  <div class="project-gallery">
+
+    <figure class="gallery-card">
+      <img
+        src="../assets/image/scene-designer.webp"
+        alt="Editor de escena de MonoWin con mapa top-down, grilla y herramientas de diseño"
+        loading="lazy">
+
+      <figcaption>
+        <strong>Diseñador de escena</strong><br>
+        Configuración de mapas, grilla, actores, objetos, vehículos, iluminación
+        y elementos interactivos del escenario.
+      </figcaption>
+    </figure>
+
+    <figure class="gallery-card">
+      <img
+        src="../assets/image/editor-25d.webp"
+        alt="Editor 2.5D de MonoWin mostrando una escena y controles de profundidad"
+        loading="lazy">
+
+      <figcaption>
+        <strong>Editor 2.5D</strong><br>
+        Configuración de horizonte, profundidad, perspectiva y posicionamiento
+        de elementos para escenas con sensación de profundidad.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p>
+    Las escenas también pueden incorporar submapas, puntos de viaje entre
+    escenarios, efectos ambientales, zonas animadas y otros elementos preparados
+    específicamente para ser activados durante la sesión.
+  </p>
+</section>
+
+
+<!-- Mesa de juego -->
+<section class="project-section">
+  <p class="eyebrow">Mesa de juego</p>
+
+  <h2>Dirección durante la sesión</h2>
+
+  <p>
+    Una vez iniciada la partida, MonoWin utiliza la configuración preparada
+    previamente para convertir el escenario en una mesa interactiva desde la
+    que se controla el desarrollo de la sesión.
+  </p>
+
+  <div class="project-gallery">
+
+    <figure class="gallery-card">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-label="Demostración de la mesa de juego de MonoWin con fichas, iluminación, efectos ambientales y efectos visuales">
+        <source src="../assets/video/gameplay-fow.mp4" type="video/mp4">
+        Tu navegador no soporta reproducción de video.
+      </video>
+
+      <figcaption>
+        <strong>Vista de juego</strong><br>
+        Movimiento de fichas, niebla de guerra, iluminación, efectos ambientales,
+        animaciones y control visual del escenario.
+      </figcaption>
+    </figure>
+
+    <figure class="gallery-card">
+      <img
+        src="../assets/image/character-stats.webp"
+        alt="Panel de personaje de MonoWin con heridas, características y habilidades"
+        loading="lazy">
+
+      <figcaption>
+        <strong>Personajes durante la partida</strong><br>
+        Consulta de características, heridas, habilidades, hechizos, estados
+        e información asociada a cada personaje.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p>
+    Desde esta interfaz es posible cambiar de escena, recorrer mapas y submapas,
+    revelar u ocultar zonas, mostrar imágenes y documentos a los jugadores y
+    conservar el estado de la partida para continuarla posteriormente.
+  </p>
+</section>
+
+
+<!-- Sistemas y combate -->
+<section class="project-section">
+  <p class="eyebrow">Sistemas y combate</p>
+
+  <h2>Reglas configurables en lugar de un único sistema</h2>
+
+  <p>
+    MonoWin no está diseñado alrededor de las reglas de un único juego. Cada
+    sistema puede definir sus propias características, dados y reglas de
+    resolución, permitiendo que las herramientas disponibles durante la partida
+    se adapten al juego seleccionado.
+  </p>
+
+  <div class="project-gallery">
+
+    <figure class="gallery-card">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-label="Demostración del sistema de dados y combate de MonoWin">
+        <source src="../assets/video/combat-dice.mp4" type="video/mp4">
+        Tu navegador no soporta reproducción de video.
+      </video>
+
+      <figcaption>
+        <strong>Dados y combate</strong><br>
+        Resolución de tiradas, pruebas de personaje y PNJ, cálculo de daño,
+        aplicación de heridas y gestión de estados.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p>
+    Esta separación permite reutilizar el VTT con distintos juegos de rol sin
+    trasladar sus reglas directamente al núcleo de la mesa de juego.
+  </p>
+</section>
+
+
+<!-- Arquitectura -->
+<section class="project-section">
+  <p class="eyebrow">Arquitectura</p>
+
+  <h2>Separar configuración, ejecución y representación</h2>
+
+  <p>
+    MonoWin combina una interfaz de administración basada en WinForms con una
+    capa de representación interactiva desarrollada con MonoGame. La aplicación
+    mantiene separados los componentes responsables de configuración, persistencia,
+    reglas de juego, multimedia y representación gráfica.
+  </p>
+
+  <div class="project-gallery">
+
+    <figure class="gallery-card">
+      <img
+        src="../assets/image/monowin-architecture.webp"
+        alt="Diagrama de arquitectura general de MonoWin"
+        loading="lazy">
+
+      <figcaption>
+        <strong>Arquitectura general</strong><br>
+        Relación entre las herramientas de configuración, persistencia,
+        servicios y la mesa interactiva.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p>
+    Esta estructura permite que las herramientas tradicionales de escritorio
+    se encarguen de tareas de edición y administración, mientras MonoGame se
+    ocupa del renderizado y de los elementos que requieren actualización
+    continua durante la partida.
+  </p>
+</section>
+```
